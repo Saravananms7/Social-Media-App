@@ -5,7 +5,7 @@ team members :
 2. Rashi
 3. John Saju
 4. nandana mariam
-5. parvathi krishna
+5. Parvathi Krishna
 6. Maria jose
 7. Archana
 
