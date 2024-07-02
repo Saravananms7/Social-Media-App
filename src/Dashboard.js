@@ -6,6 +6,7 @@ import post1 from '../src/Images/post1.jpg';
 import post2 from '../src/Images/post2.jpg'; 
 import nandana from '../src/Images/nandana.jpg'; 
 import john from '../src/Images/john.png'; 
+import Header from '../src/header';
 
 function Tweet({ username, content }) {
   return (
@@ -99,7 +100,11 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       <Sidebar />
+      <div class="centerp">
+      <Header class="logo"/>
       <Feed />
+      
+      </div>
     </div>
   );
 }
