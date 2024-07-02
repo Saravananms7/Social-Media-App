@@ -100,8 +100,8 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       <Sidebar />
-      <div class="centerp">
-      <Header class="logo"/>
+      <div>
+      <Header class="logopandi"/>
       <Feed />
       
       </div>

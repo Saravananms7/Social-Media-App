@@ -108,6 +108,7 @@
   flex: 0 0 250px;
   background-color: #A1D6E2;
   padding: 20px;
+  margin-top: 80px;
   
 }
 
@@ -389,4 +390,10 @@
 
 .comments1 p {
   margin-bottom: 5px;
+}
+
+.header_logo{
+ display: flex;
+ padding-left
+ : 120px;
 }
