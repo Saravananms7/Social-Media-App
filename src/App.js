@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import image from '../src/Images/login.png'; 
 
-function App() {
+function Login() {
   const [isLogin, setIsLogin] = useState(true);
   const [loginDetails, setLoginDetails] = useState({ email: '', password: '' });
   const [signupDetails, setSignupDetails] = useState({ email: '', password: '', confirmPassword: '' });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -22,6 +24,7 @@ function App() {
     e.preventDefault();
     // Handle login logic here
     console.log('Login Details:', loginDetails);
+    navigate('/dashboard'); // Redirect to dashboard page
   };
 
   const handleSignupSubmit = (e) => {
@@ -109,6 +112,26 @@ function App() {
         </div>
       </div>
     </div>
+  );
+}
+
+function Dashboard() {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome to the dashboard!</p>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
