@@ -238,7 +238,7 @@
   width: 350px;
 }
 
-.profile-page {
+.profile-page1 {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -247,48 +247,145 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-header {
+.profile-header1 {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.profile-avatar {
+.profile-avatar1 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-right: 20px;
 }
 
-.profile-info {
+.profile-info1 {
   flex-grow: 1;
 }
 
-.profile-name {
+.profile-name1 {
   margin: 0;
   font-size: 1.5rem;
   color: #333;
 }
 
-.profile-handle {
+.profile-handle1 {
   margin: 0;
   color: #777;
 }
 
-.profile-details {
+.profile-details1 {
   margin-top: 20px;
 }
 
-.profile-details h2 {
+.profile-details1 h2 {
   margin-top: 0;
   color: #333;
 }
 
-.profile-details p {
+.profile-details1 p {
   color: #555;
 }
 
-.logo
+.logo1
 {
   align-content: center;
+}
+
+.profile-page1 {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #F1F1F2;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info1 {
+  flex-grow: 1;
+}
+
+.profile-name1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.profile-handle1 {
+  margin: 0;
+  color: #777;
+}
+
+.profile-details1 {
+  margin-top: 20px;
+}
+
+.profile-details1 h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.profile-details1 p {
+  color: #555;
+}
+
+.profile-posts1 {
+  margin-top: 20px;
+}
+
+.profile-posts1 h2 {
+  color: #333;
+}
+
+.post1 {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-image1 {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.caption1 {
+  margin-bottom: 10px;
+}
+
+.actions1 {
+  margin-bottom: 10px;
+}
+
+.like-button1, .comment-button1 {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.comments1 {
+  margin-bottom: 10px;
+}
+
+.comments1 p {
+  margin-bottom: 5px;
 }
