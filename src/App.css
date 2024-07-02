@@ -86,3 +86,9 @@
   color: #157A9C;
   text-decoration: underline;
 }
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}

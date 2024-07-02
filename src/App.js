@@ -6,6 +6,7 @@ function App() {
   const [isLogin, setIsLogin] = useState(true);
   const [loginDetails, setLoginDetails] = useState({ email: '', password: '' });
   const [signupDetails, setSignupDetails] = useState({ email: '', password: '', confirmPassword: '' });
+  const [error, setError] = useState('');
 
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -25,15 +26,20 @@ function App() {
 
   const handleSignupSubmit = (e) => {
     e.preventDefault();
+    if (signupDetails.password !== signupDetails.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
     // Handle signup logic here
     console.log('Signup Details:', signupDetails);
+    setError(''); // Clear error after successful submission
   };
 
   return (
     <div className="App">
       <div className="container">
         <div className="image-container">
-          <img src={image} alt="Login page" />
+          <img src={image} alt="Description of the image" />
         </div>
         <div className="form-container">
           <h1>{isLogin ? 'Login' : 'Signup'}</h1>
@@ -93,6 +99,7 @@ function App() {
                   required
                 />
               </div>
+              {error && <p className="error">{error}</p>}
               <button type="submit">Signup</button>
             </form>
           )}
