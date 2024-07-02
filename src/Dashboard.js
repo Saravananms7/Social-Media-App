@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css'; // Import Dashboard-specific CSS
 import { Link } from 'react-router-dom';
 import image from '../src/Images/profile.png'; 
+import post1 from '../src/Images/post1.jpg'; 
+import post2 from '../src/Images/post2.jpg'; 
 
 function Tweet({ username, content }) {
   return (
@@ -38,17 +40,54 @@ function Sidebar() {
 }
 
 function Feed() {
-  // Mock data for tweets
-  const tweets = [
-    { id: 1, username: 'user1', content: 'First tweet content' },
-    { id: 2, username: 'user2', content: 'Second tweet content' },
-    { id: 3, username: 'user3', content: 'Third tweet content' },
+  const posts = [
+    {
+      id: 1,
+      profileName: 'John Saju',
+      profileImage: image, // Corrected: pass the imported image variable directly
+      postImage: post1, // Corrected: pass the imported image variable directly
+      caption: 'This is a beautiful view!',
+      likes: 128,
+      comments: [
+        { id: 1, user: 'Nandana Mariyam', comment: 'Amazing!' },
+        { id: 2, user: 'Parvathy', comment: 'Love it!' }
+      ]
+    },
+    {
+      id: 2,
+      profileName: 'Nandana Mariyam Peter',
+      profileImage: image, // Corrected: pass the imported image variable directly
+      postImage: post2, // Corrected: pass the imported image variable directly
+      caption: 'Fun day at the beach 🏖️',
+      likes: 75,
+      comments: [
+        { id: 1, user: 'Sarassu', comment: 'Looks awesome!' }
+      ]
+    }
   ];
 
   return (
     <div className="feed">
-      {tweets.map(tweet => (
-        <Tweet key={tweet.id} username={tweet.username} content={tweet.content} />
+      {posts.map((post) => (
+        <div className="post" key={post.id}>
+          <div className="post-header">
+            <img className="profile-image" src={post.profileImage} alt="Profile" />
+            <h3 className="profile-name">{post.profileName}</h3>
+          </div>
+          <img className="post-image" src={post.postImage} alt="Post" />
+          <div className="post-details">
+            <p className="caption"><strong>{post.profileName}</strong>: {post.caption}</p>
+            <div className="actions">
+              <button className="like-button">Like ({post.likes})</button>
+              <button className="comment-button">Comment ({post.comments.length})</button>
+            </div>
+            <div className="comments">
+              {post.comments.map((comment) => (
+                <p key={comment.id}><strong>{comment.user}</strong>: {comment.comment}</p>
+              ))}
+            </div>
+          </div>
+        </div>
       ))}
     </div>
   );
