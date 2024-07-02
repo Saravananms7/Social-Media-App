@@ -8,7 +8,7 @@ team members :
 5. Parvathi Krishna
 6. Maria jose
 7. Archana
-8. Aysha P s
+8. Aysha P S
 
 
 # Getting Started with Create React App
