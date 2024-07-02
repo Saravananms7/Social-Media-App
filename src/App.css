@@ -92,3 +92,84 @@
   margin-top: 1rem;
   text-align: center;
 }
+
+.dashboard-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #A1D6E2;
+  padding: 20px;
+  
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-weight: bold;
+  display: block;
+}
+
+.profile-handle {
+  color: #A1D6E2;
+  display: block;
+}
+
+.sidebar-links {
+  margin-top: 20px;
+}
+
+.sidebar-link {
+  display: block;
+  margin-bottom: 10px;
+  color: #A1D6E2;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  text-decoration: underline;
+}
+
+.feed {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.tweet {
+  background-color: #F1F1F2;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.tweet-content {
+  color: #1a1a1b;
+}

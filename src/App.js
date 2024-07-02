@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import image from '../src/Images/login.png'; 
+import Dashboard from './Dashboard'; // Assuming Dashboard component is in the same directory
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -22,9 +23,13 @@ function Login() {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Login Details:', loginDetails);
-    navigate('/dashboard'); // Redirect to dashboard page
+    // Simulating login logic for demonstration
+    if (loginDetails.email === 'test@example.com' && loginDetails.password === 'password') {
+      console.log('Login successful!');
+      navigate('/dashboard'); // Redirect to dashboard page
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   const handleSignupSubmit = (e) => {
@@ -69,6 +74,7 @@ function Login() {
                 />
               </div>
               <button type="submit">Login</button>
+              {error && <p className="error">{error}</p>}
             </form>
           ) : (
             <form onSubmit={handleSignupSubmit}>
@@ -102,8 +108,8 @@ function Login() {
                   required
                 />
               </div>
-              {error && <p className="error">{error}</p>}
               <button type="submit">Signup</button>
+              {error && <p className="error">{error}</p>}
             </form>
           )}
           <button className="switch-button" onClick={() => setIsLogin(!isLogin)}>
@@ -111,15 +117,6 @@ function Login() {
           </button>
         </div>
       </div>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome to the dashboard!</p>
     </div>
   );
 }
