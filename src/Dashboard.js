@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css'; // Import Dashboard-specific CSS
 import { Link } from 'react-router-dom';
+import image from '../src/Images/profile.png'; 
 
 function Tweet({ username, content }) {
   return (
@@ -19,12 +20,12 @@ function Sidebar() {
       <div className="profile">
         <img
           className="profile-image"
-          src="https://pbs.twimg.com/profile_images/1308010958862905344/5IJ_CuBi_400x400.jpg"
+          src={image}
           alt="Profile"
         />
         <div className="profile-info">
-          <span className="profile-name">Your Name</span>
-          <span className="profile-handle">@yourhandle</span>
+          <span className="profile-name">Profile Name</span>
+          <span className="profile-handle">@profile_id</span>
         </div>
       </div>
       <div className="sidebar-links">

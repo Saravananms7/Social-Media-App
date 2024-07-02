@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import image from '../src/Images/login.png'; 
+import image from '../src/Images/Pandi.png'; 
 import Dashboard from './Dashboard'; // Assuming Dashboard component is in the same directory
 
 function Login() {
@@ -53,7 +53,7 @@ function Login() {
           <h1>{isLogin ? 'Login' : 'Signup'}</h1>
           {isLogin ? (
             <form onSubmit={handleLoginSubmit}>
-              <div>
+              <div class="textbar">
                 <label>Email:</label>
                 <input
                   type="email"
@@ -63,7 +63,7 @@ function Login() {
                   required
                 />
               </div>
-              <div>
+              <div class="textbar">
                 <label>Password:</label>
                 <input
                   type="password"
@@ -78,7 +78,7 @@ function Login() {
             </form>
           ) : (
             <form onSubmit={handleSignupSubmit}>
-              <div>
+              <div className='textbar'>
                 <label>Email:</label>
                 <input
                   type="email"
@@ -88,7 +88,7 @@ function Login() {
                   required
                 />
               </div>
-              <div>
+              <div class="textbar">
                 <label>Password:</label>
                 <input
                   type="password"
@@ -98,7 +98,7 @@ function Login() {
                   required
                 />
               </div>
-              <div>
+              <div class="textbar">
                 <label>Confirm Password:</label>
                 <input
                   type="password"
