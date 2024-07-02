@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css'; // Import Dashboard-specific CSS
 import { Link } from 'react-router-dom';
-import image from '../src/Images/profile.png'; 
+import image from '../src/Images/rashi.jpg'; 
 import post1 from '../src/Images/post1.jpg'; 
 import post2 from '../src/Images/post2.jpg'; 
+import nandana from '../src/Images/nandana.jpg'; 
+import john from '../src/Images/john.png'; 
 
 function Tweet({ username, content }) {
   return (
@@ -26,8 +28,8 @@ function Sidebar() {
           alt="Profile"
         />
         <div className="profile-info">
-          <span className="profile-name">Profile Name</span>
-          <span className="profile-handle">@profile_id</span>
+          <span className="profile-name">Mohammed Rashid M</span>
+          <span className="profile-handle">@rashi_sha</span>
         </div>
       </div>
       <div className="sidebar-links">
@@ -44,24 +46,24 @@ function Feed() {
     {
       id: 1,
       profileName: 'John Saju',
-      profileImage: image, // Corrected: pass the imported image variable directly
+      profileImage: john, // Corrected: pass the imported image variable directly
       postImage: post1, // Corrected: pass the imported image variable directly
       caption: 'This is a beautiful view!',
       likes: 128,
       comments: [
-        { id: 1, user: 'Nandana Mariyam', comment: 'Amazing!' },
-        { id: 2, user: 'Parvathy', comment: 'Love it!' }
+        { id: 1, user: 'Nandana Mariam', comment: 'Amazing!' },
+        { id: 2, user: 'Parvathi', comment: 'Love it!' }
       ]
     },
     {
       id: 2,
-      profileName: 'Nandana Mariyam Peter',
-      profileImage: image, // Corrected: pass the imported image variable directly
+      profileName: 'Nandana Mariam Peter',
+      profileImage: nandana, // Corrected: pass the imported image variable directly
       postImage: post2, // Corrected: pass the imported image variable directly
       caption: 'Fun day at the beach 🏖️',
       likes: 75,
       comments: [
-        { id: 1, user: 'Sarassu', comment: 'Looks awesome!' }
+        { id: 1, user: 'Sarassu Selva', comment: 'Looks awesome!' }
       ]
     }
   ];
