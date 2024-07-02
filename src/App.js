@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import image from '../src/Images/Pandi.png'; 
-import Dashboard from './Dashboard'; // Assuming Dashboard component is in the same directory
+import Dashboard from './Dashboard';
+import Profile from './Profile'; // Assuming Dashboard component is in the same directory
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -127,9 +128,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/Profile" element={<Profile />} /> {/* Add the profile route */}
       </Routes>
     </Router>
   );
 }
+
+
 
 export default App;

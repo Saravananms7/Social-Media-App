@@ -34,7 +34,7 @@ function Sidebar() {
       </div>
       <div className="sidebar-links">
         <Link to="/dashboard" className="sidebar-link">Home</Link>
-        <Link to="/dashboard/profile" className="sidebar-link">Profile</Link>
+        <Link to="/dashboard/profile" className="sidebar-link">Profile</Link> {/* Update this link */}
         <Link to="/dashboard/settings" className="sidebar-link">Settings</Link>
       </div>
     </div>
