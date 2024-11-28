@@ -1,7 +1,7 @@
 # Pandipada
 Social media app
 team members :
-1. Saravanan Selva
+1. Saravanan M
 2. Rashi
 3. John Saju
 4. Nandana Mariam
